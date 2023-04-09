@@ -16,3 +16,43 @@ img {
   display: block;
   max-width: 100%;
 }
+
+button {
+  margin: 20px;
+  padding: 1.2em 2.8em;
+
+  border: 2px solid #8492f6;
+  border-radius: 0.6em;
+  color: #fff;
+  background-color: transparent;
+
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 40px 40px #8492f6 inset, 0 0 0 0 #8492f6;
+  transition: all 150ms ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0 0 10px 0 #8492f6 inset, 0 0 10px 4px #8492f6;
+}
+
+button[disabled] {
+  color: #000;
+  background-color: transparent;
+  box-shadow: 0 0 40px 40px #d3d3d3 inset, 0 0 0 0 #d3d3d3;
+  cursor: not-allowed;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
