@@ -17,7 +17,7 @@ img {
   max-width: 100%;
 }
 
-button {
+.btn {
   margin: 20px;
   padding: 1.2em 2.8em;
 
@@ -39,11 +39,11 @@ button {
   transition: all 150ms ease-in-out;
 }
 
-button:hover {
+.btn:hover {
   box-shadow: 0 0 10px 0 #8492f6 inset, 0 0 10px 4px #8492f6;
 }
 
-button[disabled] {
+.btn[disabled] {
   color: #000;
   background-color: transparent;
   box-shadow: 0 0 40px 40px #d3d3d3 inset, 0 0 0 0 #d3d3d3;
