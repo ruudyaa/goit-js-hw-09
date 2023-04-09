@@ -67,8 +67,15 @@ input#datetime-picker[disabled] {
   color: #99a2e6;
 }
 
+.btn-start[disabled] {
+  color: #fff;
+  background-color: #99a2e6;
+}
+
+.btn-start:hover,
 .btn-start:hover {
   color: #fff;
+  background-color: #99a2e6;
 }
 
 .btn-start:active {
