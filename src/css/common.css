@@ -137,3 +137,12 @@ input#datetime-picker[disabled] {
   font-size: 20px;
   font-weight: 400;
 }
+
+span {
+  text-align: center;
+  text-transform: uppercase;
+  color: #99a2e6;
+  text-shadow: 0 4px 4px #99a2e6, 0 -2px 1px #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
