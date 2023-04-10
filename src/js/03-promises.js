@@ -2,14 +2,14 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
   body: document.querySelector('body'),
-  form: document.querySelector('form.form'),
+  form: document.querySelector('.form'),
   delay: document.querySelector('[name="delay"]'),
   step: document.querySelector('[name="step"]'),
   amount: document.querySelector('[name="amount"]'),
 };
 
 refs.body.style.backgroundColor = '#f7eff4';
-refs.form.addEventListener('click', onPromiseCreate);
+refs.form.addEventListener('submit', onPromiseCreate);
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
@@ -32,14 +32,15 @@ function onPromiseCreate(e) {
   let amount = Number(refs.amount.value);
 
   for (let i = 1; i <= amount; i += 1) {
-    let promiseDelay = valueDelay + step * i;
+    const position = i;
 
-    createPromise(i, promiseDelay)
+    createPromise(position, valueDelay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
+    valueDelay += step;
   }
 }
