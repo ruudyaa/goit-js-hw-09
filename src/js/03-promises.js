@@ -43,4 +43,5 @@ function onPromiseCreate(e) {
       });
     valueDelay += step;
   }
+  e.currentTarget.reset();
 }
